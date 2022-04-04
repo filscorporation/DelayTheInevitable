@@ -51,11 +51,11 @@ namespace SteelCustom.Enemies
                     Entity entity = ResourcesManager.LoadAsepriteData("orc.aseprite").CreateEntityFromAsepriteData();
                     Enemy unit = entity.AddComponent<Enemy>();
 
-                    unit.EnemyWeight = 3;
+                    unit.EnemyWeight = 2;
                     unit.MaxHealth = 80;
                     unit.Health = 80;
                     unit.AttackDamage = 7;
-                    unit.AttackDelay = 1.8f;
+                    unit.AttackDelay = 2.2f;
                     unit.AttackRange = 0.9f;
                     unit.ViewRange = 3.0f;
                     unit.Speed = 0.2f;
@@ -74,10 +74,10 @@ namespace SteelCustom.Enemies
                     Entity entity = ResourcesManager.LoadAsepriteData("ogre.aseprite").CreateEntityFromAsepriteData();
                     Orge unit = entity.AddComponent<Orge>();
 
-                    unit.EnemyWeight = 30;
+                    unit.EnemyWeight = 5;
                     unit.MaxHealth = 300;
                     unit.Health = 300;
-                    unit.AttackDamage = 15;
+                    unit.AttackDamage = 10;
                     unit.AttackDelay = 3.0f;
                     unit.AttackNormalTime = 1.0f;
                     unit.AttackRange = 1.2f;
@@ -102,8 +102,8 @@ namespace SteelCustom.Enemies
                     unit.MaxHealth = 1;
                     unit.Health = 1;
                     unit.AttackDamage = 50;
-                    unit.AttackDelay = 3.0f;
-                    unit.AttackNormalTime = 1.2f;
+                    unit.AttackDelay = 0.0f;
+                    unit.AttackNormalTime = 0.0f;
                     unit.AttackRange = 0.9f;
                     unit.ViewRange = 4.0f;
                     unit.Speed = 1.2f;

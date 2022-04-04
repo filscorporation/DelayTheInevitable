@@ -27,8 +27,8 @@ namespace SteelCustom.Spells
                 
                 Camera.Main.GetComponent<CameraController>().Shake(0.7f);
 
-                const float RADIUS = 1.2f;
-                const float DAMAGE = 50;
+                const float RADIUS = 1.1f;
+                const float DAMAGE = 100;
 
                 foreach (Entity hit in Physics.AABBCast(Target, new Vector2(RADIUS, RADIUS)))
                 {

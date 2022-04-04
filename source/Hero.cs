@@ -14,8 +14,8 @@ namespace SteelCustom
         public float Experience = 0.0f;
         public int Level = 1;
 
-        public const int LEVEL2_EXP = 5;
-        public const int LEVEL3_EXP = 20;
+        public const int LEVEL2_EXP = 10;
+        public const int LEVEL3_EXP = 30;
 
         public Vector3 Root;
         
@@ -67,6 +67,7 @@ namespace SteelCustom
             if (Vector3.Distance(Target.Entity.Transformation.Position, Root) > MovementRange)
             {
                 Rotate(Root);
+                SetVelocity(Vector2.Zero);
                 return;
             }
             

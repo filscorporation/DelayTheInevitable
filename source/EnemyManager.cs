@@ -499,7 +499,8 @@ namespace SteelCustom
         private int currentWave = 0;
         private int currentWaveGroup = 0;
         private float currentWaveTimer = 0.0f;
-        private float lastWaveMultiplier = 1.0f;
+        
+        public static float WaveMultiplier = 1.0f;
 
         private UIText waveText;
 
@@ -508,7 +509,7 @@ namespace SteelCustom
             //Spawn(EnemyStorage.EnemyType.Goblin, 1, true);
             //Spawn(EnemyStorage.EnemyType.Orc, 1, true);
             //Spawn(EnemyStorage.EnemyType.Ogre, 1, true);
-            //Spawn(EnemyStorage.EnemyType.Hunter, 1, true);
+            //Spawn(EnemyStorage.EnemyType.Hunter, 1, false);
             
             waveText = UI.CreateUIText($"Wave: {currentWave + 1}", "Wave", GameManager.InGameUIRoot);
             waveText.TextAlignment = AlignmentType.CenterLeft;
@@ -545,8 +546,8 @@ namespace SteelCustom
                 if (currentWave == waves.Count - 1)
                 {
                     Log.LogInfo("Last wave X");
-                    lastWaveMultiplier += 1.0f;
-                    waveText.Text = $"Wave: {currentWave + 1} (x{(int)lastWaveMultiplier})";
+                    WaveMultiplier += 1.0f;
+                    waveText.Text = $"Wave: {currentWave + 1} (x{(int)WaveMultiplier})";
                 }
                 else
                 {
@@ -563,7 +564,7 @@ namespace SteelCustom
         private void SpawnGroup(WaveSubInfo groupInfo)
         {
             int count = Random.NextInt(groupInfo.MinEnemyCount, groupInfo.MaxEnemyCount);
-            count = (int)Math.Round(count * lastWaveMultiplier);
+            count = (int)Math.Round(count);
             Spawn(groupInfo.EnemyType, count);
         }
 
@@ -580,6 +581,13 @@ namespace SteelCustom
 
                 unit.Entity.Name = "Enemy";
                 unit.Transformation.Position = position.SetZ(1.0f);
+
+                if (WaveMultiplier > 1.1f)
+                {
+                    unit.MaxHealth *= WaveMultiplier;
+                    unit.Health = unit.MaxHealth;
+                    unit.AttackDamage *= WaveMultiplier;
+                }
 
                 unit.Entity.AddComponent<AudioSource>();
                 

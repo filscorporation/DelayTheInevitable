@@ -34,7 +34,7 @@ namespace SteelCustom
             //Inventory.AddItem(HeroStorage.Heroes[0]);
             Inventory.AddItem(HeroStorage.Heroes[1]);
             //Inventory.AddItem(HeroStorage.Heroes[2]);
-            //Inventory.AddItem(SpellStorage.Spells[(int)SpellStorage.SpellType.Meteor]);
+            Inventory.AddItem(SpellStorage.Spells[(int)SpellStorage.SpellType.Meteor]);
             //Inventory.AddItem(SpellStorage.Spells[(int)SpellStorage.SpellType.Blizzard]);
             
             Shop = UI.CreateUIImage(null, "Shop", GameManager.InGameUIRoot).Entity.AddComponent<UIShop>();
@@ -63,7 +63,7 @@ namespace SteelCustom
             timeText.RectTransform.AnchorMax = new Vector2(0.0f, 1.0f);
             timeText.RectTransform.AnchoredPosition = new Vector2(200, 0);
             timeText.RectTransform.Pivot = new Vector2(0.0f, 1.0f);
-            timeText.RectTransform.Size = new Vector2(200, 40);
+            timeText.RectTransform.Size = new Vector2(300, 40);
         }
 
         public override void OnUpdate()

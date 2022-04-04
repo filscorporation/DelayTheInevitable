@@ -29,6 +29,8 @@ namespace SteelCustom
 
         public void Attack(int weight)
         {
+            Camera.Main.Entity.GetComponent<CameraController>().Shake(weight * 0.6f);
+            
             if (dead)
                 return;
             
@@ -41,8 +43,6 @@ namespace SteelCustom
             }
             
             uiHealth.Set(Toughness, MaxToughness);
-            
-            Camera.Main.Entity.GetComponent<CameraController>().Shake(weight * 0.6f);
 
             StartCoroutine(DamagedRoutine());
         }

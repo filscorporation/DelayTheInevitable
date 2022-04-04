@@ -111,7 +111,7 @@ namespace SteelCustom.Heroes
             yield return new WaitForSeconds(1.5f);
             canAttack = true;
             
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(11f);
             canUseLevel3Skill = true;
         }
     }

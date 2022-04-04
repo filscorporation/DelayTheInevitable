@@ -29,7 +29,7 @@ namespace SteelCustom.Heroes
                     hero.Name = "Warrior";
                     hero.MaxHealth = 20;
                     hero.Health = 20;
-                    hero.AttackDamage = 5;
+                    hero.AttackDamage = 4;
                     hero.AttackDelay = 1.2f;
                     hero.AttackRange = 0.8f;
                     hero.MovementRange = 2.5f;
@@ -59,7 +59,7 @@ namespace SteelCustom.Heroes
                     hero.Name = "Archer";
                     hero.MaxHealth = 5;
                     hero.Health = 5;
-                    hero.AttackDamage = 3;
+                    hero.AttackDamage = 2;
                     hero.AttackDelay = 2.0f;
                     hero.AttackRange = 4.0f;
                     hero.MovementRange = 4.0f;

@@ -37,7 +37,7 @@ namespace SteelCustom.Spells
                 Name = "Meteor",
                 Description = "Deal high damage in small area",
                 Icon = ResourcesManager.LoadImage("fireball_icon.png"),
-                Cost = 60,
+                Cost = 50,
                 NeedPosition = true,
             },
             new SpellInfo
@@ -51,7 +51,7 @@ namespace SteelCustom.Spells
                 Name = "Blizzard",
                 Description = "Freeze all enemies on the map",
                 Icon = ResourcesManager.LoadImage("blizzard_icon.png"),
-                Cost = 35,
+                Cost = 45,
                 NeedPosition = false,
             },
             new SpellInfo
@@ -65,7 +65,7 @@ namespace SteelCustom.Spells
                 Name = "Healing wave",
                 Description = "Heal all allied units on the map",
                 Icon = ResourcesManager.LoadImage("heal_wave_icon.png"),
-                Cost = 30,
+                Cost = 15,
                 NeedPosition = false,
             },
             new SpellInfo
@@ -77,7 +77,7 @@ namespace SteelCustom.Spells
                     return spell;
                 },
                 Name = "Rage",
-                Description = "Increase attack speed of all allied units on the map for short duration",
+                Description = "Double attack speed of all allied units on the map for short duration",
                 Icon = ResourcesManager.LoadImage("rage_icon.png"),
                 Cost = 50,
                 NeedPosition = false,
